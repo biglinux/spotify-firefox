@@ -1,0 +1,5 @@
+d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
+8465894cfa03edc3c3bee9479171019d  DEBIAN/control
+6f9162ec293b9c23481bad8a6c77d04c  usr/share/applications/spotify-firefox.desktop
+086f2338d14eb3e4d508c9ffc6a0897d  usr/share/icons/hicolor/64x64/apps/spotify.png
+63074d99406cd50274ea282142665f8f  usr/bin/spotify-firefox

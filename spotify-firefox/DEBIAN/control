@@ -1,0 +1,10 @@
+Package: spotify-firefox
+Version: 1.0.0-1big4
+Depends: firefox|firefox-esr, x11-utils
+Architecture: all
+Maintainer: Bruno Goncalves <www.biglinux.com.br>
+Section: admin
+Priority: optional
+Installed-Size:24
+Description: Open spotify in Firefox like a webapp
+

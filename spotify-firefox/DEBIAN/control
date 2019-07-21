@@ -1,5 +1,5 @@
 Package: spotify-firefox
-Version: 1.0.0-1big4
+Version: 1.0.0-1big5
 Depends: firefox|firefox-esr, x11-utils
 Architecture: all
 Maintainer: Bruno Goncalves <www.biglinux.com.br>

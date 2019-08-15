@@ -64,13 +64,13 @@ echo \
 sed -i 's|user_pref("browser.urlbar.placeholderName.*||g' "$DIR"/prefs.js
 
 
-firefox --class=firefoxspotifycom -profile "$DIR" -no-remote -new-instance "https://open.spotify.com/browse/featured" &
+firefox --class=firefoxwebapp-spotify -profile "$DIR" -no-remote -new-instance "https://open.spotify.com/browse/featured" &
 
 
 count=0
 while [  $count -lt 100 ]; do
-    if [ "$(xwininfo -root -children -all | grep -iE "Navigator.*firefoxspotifycom")" != "" ]; then
-        /usr/share/spotify-firefox/xseticon -id "$(xwininfo -root -children -all | grep -iE "Navigator.*firefoxspotifycom" | awk '{print $1}')" /usr/share/icons/hicolor/64x64/apps/spotify.png
+    if [ "$(xwininfo -root -children -all | grep -iE "Navigator.*firefoxwebapp-spotify")" != "" ]; then
+        /usr/share/spotify-firefox/xseticon -id "$(xwininfo -root -children -all | grep -iE "Navigator.*firefoxwebapp-spotify" | awk '{print $1}')" /usr/share/icons/hicolor/64x64/apps/spotify.png
         count=100
     else
         let count=count+1;

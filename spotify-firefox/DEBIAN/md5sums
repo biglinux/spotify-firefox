@@ -1,5 +1,6 @@
 d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
-6c0555b7825dd5ab8440bd080dcbb4a3  DEBIAN/control
+ce301f98358bbaa221d8da35a924fbd0  DEBIAN/control
+36be98244040d2a0fe5a003175bc7f30  usr/bin/spotify-firefox
 6f9162ec293b9c23481bad8a6c77d04c  usr/share/applications/spotify-firefox.desktop
 086f2338d14eb3e4d508c9ffc6a0897d  usr/share/icons/hicolor/64x64/apps/spotify.png
 b234ee4d69f5fce4486a80fdaf4a4263  usr/share/spotify-firefox/LICENSE
@@ -7,4 +8,3 @@ a0f630507fefaa011316b5830d855767  usr/share/spotify-firefox/Makefile
 cc21f5db85721b6abc01f1271da9c1a3  usr/share/spotify-firefox/README.md
 befaba9c5dfc845a248e0d0dc414e175  usr/share/spotify-firefox/xseticon
 584f21274c1c1e1272271c129c9ff450  usr/share/spotify-firefox/xseticon.c
-63074d99406cd50274ea282142665f8f  usr/bin/spotify-firefox

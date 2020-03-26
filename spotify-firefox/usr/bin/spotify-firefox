@@ -28,7 +28,7 @@
 #
 # Directory custom profile
 #
-mkdir -p "$HOME/.spotify/chrome"
+
 DIR="$HOME/.spotify"
 
 #
@@ -40,22 +40,27 @@ if [ ! "$(command -v firefox)" ]; then
 fi
 
 
+
+if [ "$(grep "toolkit.legacyUserProfileCustomizations.stylesheets" "$DIR/prefs.js")" = "" ]; then
+    rm -R "$HOME/.spotify"
+    mkdir -p "$HOME/.spotify/chrome"
+    echo 'user_pref("media.eme.enabled", true);' >> "$DIR"/prefs.js
+    echo 'user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);' >> "$DIR"/prefs.js
+fi
+
+
+
 #
 # Custom profile
 #
 echo \
 "#nav-bar {
-    display: none !important;
+    visibility: collapse;
 }
 #TabsToolbar {
-    display: none !important;
+    visibility: collapse;
 }" \
 >> "$DIR"/chrome/userChrome.css
-
-
-if [ ! -e "$DIR/prefs.js" ]; then
-    echo 'user_pref("media.eme.enabled", true);' > "$DIR"/prefs.js
-fi
 
 echo \
 "user_pref(\"browser.tabs.warnOnClose\", false);" \
@@ -64,7 +69,7 @@ echo \
 sed -i 's|user_pref("browser.urlbar.placeholderName.*||g' "$DIR"/prefs.js
 
 
-firefox --class=firefoxwebapp-spotify -profile "$DIR" -no-remote -new-instance "https://open.spotify.com/browse/featured" &
+MOZ_DISABLE_GMP_SANDBOX=1 MOZ_DISABLE_CONTENT_SANDBOX=1 firefox --class=firefoxwebapp-spotify -profile "$DIR" -no-remote -new-instance "https://open.spotify.com/browse/featured" &
 
 
 count=0
